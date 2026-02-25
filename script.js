@@ -2,11 +2,11 @@ function getComputerChoice() {
     let ranNum = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
     let computerChoice;
     if (ranNum === 1) {
-        computerChoice = 'Rock';
+        computerChoice = 'rock';
     } else if (ranNum === 2) {
-        computerChoice = 'Paper';
+        computerChoice = 'paper';
     } else if (ranNum === 3) {
-        computerChoice = 'Scissors';
+        computerChoice = 'scissors';
     } else {
         return 'There has been an error';
     }
@@ -14,4 +14,11 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let humanChoice = prompt('Welcome to the game, do you choose Rock, paper, or scissors?');
+    return humanChoice;
+}
+
+// console.log(getHumanChoice())
+
+// console.log(getComputerChoice());
