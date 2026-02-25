@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let ranNum = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
     let computerChoice;
@@ -15,10 +18,14 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt('Welcome to the game, do you choose Rock, paper, or scissors?');
+    let humanChoice = prompt('Welcome to the game, do you choose Rock, paper, or scissors?').toLowerCase();
     return humanChoice;
 }
 
-// console.log(getHumanChoice())
+function playRound(humanChoice, computerChoice){
+
+}
+
+console.log(getHumanChoice())
 
 // console.log(getComputerChoice());
