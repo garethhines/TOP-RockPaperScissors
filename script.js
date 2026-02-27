@@ -47,6 +47,7 @@ function playGame(){
             humanScore += 1;
             console.log(`You chose ${humanChoice}, computer chose ${computerChoice}, you win! The score is Computer ${computerScore} - ${humanScore} Player.`)
         }
+    }
 
         while(computerScore < 5 && humanScore < 5){
             playRound(getHumanChoice(), getComputerChoice())
@@ -57,6 +58,5 @@ function playGame(){
         } else if (humanScore === 5) {
             console.log(`Well done, you win ${humanScore} - ${computerScore}!`);
         }; }
-    }
 
 playGame();
