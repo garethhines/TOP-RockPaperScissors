@@ -1,4 +1,3 @@
-
 function getComputerChoice() {
     let ranNum = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
     let computerChoice;
@@ -24,6 +23,7 @@ function playGame(){
     let humanScore = 0;
     let computerScore = 0;
 
+
     function playRound(humanChoice, computerChoice){
 
         if (humanChoice === computerChoice) {
@@ -44,11 +44,11 @@ function playGame(){
             computerScore += 1;
             console.log(`You chose ${humanChoice}, computer chose ${computerChoice}, computer wins! The score is Computer ${computerScore} - ${humanScore} Player.`)
         } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-            humanScore += 1;}
+            humanScore += 1;
             console.log(`You chose ${humanChoice}, computer chose ${computerChoice}, you win! The score is Computer ${computerScore} - ${humanScore} Player.`)
         }
 
-        while(computerScore !== 5 || humanScore !== 5){
+        while(computerScore < 5 && humanScore < 5){
             playRound(getHumanChoice(), getComputerChoice())
         };
 
@@ -56,7 +56,7 @@ function playGame(){
             console.log(`Tough luck, computer wins ${computerScore} - ${humanScore}!`);
         } else if (humanScore === 5) {
             console.log(`Well done, you win ${humanScore} - ${computerScore}!`);
-        };
-}
+        }; }
+    }
 
 playGame();
