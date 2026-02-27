@@ -1,11 +1,11 @@
 function getComputerChoice() {
-    let ranNum = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+    let ranNum = Math.floor(Math.random() * 3);
     let computerChoice;
-    if (ranNum === 1) {
+    if (ranNum === 0) {
         computerChoice = 'rock';
-    } else if (ranNum === 2) {
+    } else if (ranNum === 1) {
         computerChoice = 'paper';
-    } else if (ranNum === 3) {
+    } else if (ranNum === 2) {
         computerChoice = 'scissors';
     } else {
         return 'There has been an error';
